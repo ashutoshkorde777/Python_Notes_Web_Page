@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Python Basics</title>
+    <style>
+      /* CSS styling */
+      h1 {
+        color: #333;
+        font-size: 36px;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      p {
+        color: #666;
+        font-size: 18px;
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      code {
+        font-family: monospace;
+        background-color: #f5f5f5;
+        padding: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Python Basics</h1>
+    <p>Python is a popular programming language that is used for a variety of applications, including web development, data analysis, and artificial intelligence.</p>
+    <h2>Installation</h2>
+    <p>To install Python, follow these steps:</p>
+    <ol>
+      <li>Go to the official Python website, which is <a href="https://www.python.org/">https://www.python.org/</a>.</li>
+      <li>Navigate to the "Downloads" section and select the appropriate version of Python for your operating system.</li>
+      <li>Run the installer and follow the prompts to install Python.</li>
+    </ol>
+    <h2>Setup</h2>
+    <p>Once Python is installed, you can set up your development environment. A development environment is a software tool that is used to write, debug, and test code. Here are some popular development environments for Python:</p>
+    <ul>
+      <li>IDLE: IDLE is a basic development environment that is included with Python. It is a simple editor that can be used to write and run Python code.</li>
+      <li>PyCharm: PyCharm is a popular integrated development environment (IDE) that is used by many Python developers. It includes a variety of features, including code highlighting, code completion, and debugging tools.</li>
+      <li>Jupyter Notebook: Jupyter Notebook is a web-based development environment that is used for data analysis and visualization. It allows you to create and share documents that contain live code, equations, visualizations, and narrative text.</li>
+    </ul>
+    <h2>Running programs</h2>
+    <p>Once you have your development environment set up, you can start running Python programs. A Python program is a file that contains Python code, with a <code>.py</code> extension. Here's how to run a Python program:</p>
+    <ol>
+      <li>Open your development environment and create a new file.</li>
+      <li>Write your Python code in the file.</li>
+      <li>Save the file with a <code>.py</code> extension.</li>
+      <li>Open a terminal or command prompt.</li>
+      <li>Navigate to the directory where your Python program is located.</li>
+      <li>Type <code>python filename.py</code> (where <code>filename.py</code> is the name of your Python program) and press enter.</li>
+    </ol>
+    <h2>Basic Syntax</h2>
+
+
+    <p>Python is a high-level programming language known for its simplicity and readability. Understanding the basic syntax of Python is important as it provides the foundation for building more complex programs. Here's an explanation of Python's basic syntax, including variables, operators, data types, control structures, loops, and conditional statements.</p>
+    <pre>
+      <code>
+        # Variables
+        x = 5
+        y = "Hello"
+
+        # Operators
+        # Arithmetic operators
+        a = 5
+      </code>
+    </pre>
+    <h2>Operators</h2>
+    <p>Python supports a wide range of operators that are used to perform various operations on values. The most common operators are:</p>
+    <ol>
+      <li>Arithmetic Operators: used for performing mathematical operations such as addition, subtraction, multiplication, division, and modulo.</li>
+      <li>Comparison Operators: used for comparing two values to determine if they are equal or not, or if one is greater than or less than the other.</li>
+      <li>Assignment Operators: used for assigning values to variables.</li>
+    </ol>
+      <pre>
+        <code>
+          # Arithmetic operators
+          a = 5
+          b = 2
+          c = a + b # c equals 7
+          d = a - b # d equals 3
+          e = a * b # e equals 10
+          f = a / b # f equals 2.5
+          g = a % b # g equals 1
+
+          # Comparison operators
+          a == b # False
+          a != b # True
+          a > b # True
+          a < b # False
+          a >= b # True
+          a <= b # False
+
+          # Logical operators
+          a > 1 and b < 3 # True
+          a < 1 or b > 3 # False
+          not(a > 1) # False
+
+          # Assignment operators
+          x = 5
+          x += 2 # x equals 7
+          x -= 3 # x equals 4
+          x *= 2 # x equals 8
+          x /= 2 # x equals 4.0
+        </code>
+      </pre>
+      <div>
+        <h2>Data Types</h2>
+        <p>Python has several built-in data types including:
+        </p>
+        <ol>
+          <li>Numeric: used to store numeric values like integers, floating-point, and complex numbers.</li>
+          <li>String: used to store text data.</li>
+          <li>Boolean: used to store True or False values.</li>
+          <li>List: used to store a collection of values.</li>
+          <li>Tuple: used to store a collection of values that cannot be changed.</li>
+          <li>Dictionary: used to store a collection of key-value pairs.</li>
+        </ol>
+        <pre>
+          <code>
+            # Numeric data types
+            a = 5 # integer
+            b = 2.5 # float
+            c = 2 + 3j # complex
+
+            # String data type
+            s = "Hello World"
+
+            # Boolean data type
+            t = True
+            f = False
+
+            # List data type
+            lst = [1, 2, 3, 4, 5]
+
+            # Tuple data type
+            tpl = (1, 2, 3, 4, 5)
+
+            # Dictionary data type
+            dct = {"name": "John", "age": 25, "gender": "Male"}
+
+          </code>
+        </pre>
+      </div>
+      <div>
+        <h2>Strings: slicing, concatenation, methods</h2>
+        <p>Strings are a fundamental data type in Python, used to represent text. In Python, strings are defined using single or double quotes, and can be manipulated using a variety of built-in methods. Here is an explanation of some of the most commonly used operations and methods for manipulating strings in Python.
+        </p>
+        <h3>Slicing</h3>
+        <p>Slicing is a method used to extract a portion of a string. The syntax for slicing is string[start:end:step]. The start parameter represents the starting index of the slice, end represents the ending index (exclusive), and step represents the size of the steps taken between indices.
+        </p>
+        <pre>
+          <code>
+            string = "Hello, World!"
+            print(string[7:12]) # Outputs "World"
+          </code>
+        </pre>
+        <h3>Concatenation</h3>
+        <p>Concatenation is a method used to join two or more strings together. In Python, you can concatenate strings using the + operator.
+        </p>
+        <pre>
+          <code>
+            string1 = "Hello"
+            string2 = "World"
+            string3 = string1 + " " + string2
+            print(string3) # Outputs "Hello World"
+          </code>
+        </pre>
+        <h3>Methods</h3>
+        <p>Python provides many built-in methods for manipulating strings. Here are some of the most commonly used string methods:
+        </p>
+        <li>upper() and lower(): used to convert the string to all uppercase or lowercase letters, respectively.
+        </li>
+        <li>strip(): used to remove leading and trailing whitespace from a string.
+        </li>
+        <li>replace(): used to replace a specified substring with another substring.</li>
+        <li>split(): used to split a string into a list of substrings.</li>
+        <li>join(): used to join a list of strings into a single string.</li>
+        <pre>
+          <code>
+            string = "  Hello, World!  "
+            print(string.upper()) # Outputs "  HELLO, WORLD!  "
+             print(string.lower()) # Outputs "  hello, world!  "
+            print(string.strip()) # Outputs "Hello, World!"
+
+            string = "Hello, World!"
+            print(string.replace("Hello", "Hi")) # Outputs "Hi, World!"
+
+            string = "apple,banana,orange"
+            fruits = string.split(",")
+            print(fruits) # Outputs ['apple', 'banana', 'orange']
+
+            separator = " "
+            words = ["Hello", "World!"]
+            string = separator.join(words)
+            print(string) # Outputs "Hello World!"
+          </code>
+        </pre>
+        <p>These are just a few examples of the many methods available for manipulating strings in Python. By mastering these fundamental operations and methods, you will be able to work with text data effectively and efficiently in your Python programs.</p>
+      </div>
+      <div>
+        <h2>Lists: creating, indexing, slicing, methods, common operations</h2>
+        <p>In Python, a list is a mutable ordered sequence of elements, and is one of the most commonly used data structures. Here is an explanation of some of the most commonly used operations and methods for working with lists in Python.
+        </p>
+        <h3>Creating Lists</h3>
+        <p>Lists can be created in a number of ways. The simplest way to create a list is to use square brackets [] and separate elements with commas.
+        </p>
+        <pre>
+          <code>my_list = [1, 2, 3, 4, 5]
+          </code>
+        </pre>
+        <p>You can also create an empty list and append elements to it using the append() method.</p>
+        <pre>
+          <code>empty_list = []
+            empty_list.append(1)
+            empty_list.append(2)
+          </code>
+        </pre>
+        <h3>Indexing and Slicing Lists</h3>
+        <p>To access an individual element in a list, you can use square bracket notation and specify the index of the element you want to access. In Python, the index of the first element in a list is 0, the second element is 1, and so on.
+        </p>
+        <pre>
+          <code>
+            my_list = [1, 2, 3, 4, 5]
+            print(my_list[0]) # Outputs 1
+          </code>
+        </pre>
+        <p>You can also use negative indices to access elements from the end of the list.</p>
+        <pre>
+          <code>
+            my_list = [1, 2, 3, 4, 5]
+            print(my_list[-1]) # Outputs 5
+          </code>
+        </pre>
+        <p>To extract a sublist or slice from a list, you can use the slicing operator :. The syntax for slicing a list is my_list[start:end:step], where start is the starting index of the slice (inclusive), end is the ending index of the slice (exclusive), and step is the step size between indices.
+        </p>
+        <pre>
+          <code>
+           my_list = [1, 2, 3, 4, 5]
+           print(my_list[1:3]) # Outputs [2, 3]
+           print(my_list[::2]) # Outputs [1, 3, 5]
+          </code>
+        </pre>
+        <h3>List Methods</h3>
+        <p>Python provides a number of built-in methods for manipulating lists. Here are some of the most commonly used methods:</p>
+        <li>append(): used to add an element to the end of a list.
+        </li>
+        <li>insert(): used to insert an element at a specified index in the list.</li>
+        <li>remove(): used to remove the first occurrence of a specified element from a list.</li>
+        <li>pop(): used to remove and return an element from a specified index in the list.</li>
+        <li>sort(): used to sort the elements of a list in ascending order.</li>
+        <li>reverse(): used to reverse the order of the elements in a list.</li>
+        <pre>
+          <code>
+            my_list = [1, 2, 3]
+            my_list.append(4)
+            print(my_list) # Outputs [1, 2, 3, 4]
+            
+            my_list.insert(1, 5)
+            print(my_list) # Outputs [1, 5, 2, 3, 4]
+            
+            my_list.remove(3)
+            print(my_list) # Outputs [1, 5, 2, 4]
+            
+            my_list.pop(1)
+            print(my_list) # Outputs [1, 2, 4]
+            
+            my_list = [4, 3, 2, 1]
+            my_list.sort()
+            print(my_list) # Outputs [1, 2, 3, 4]
+            
+            my_list = [1, 2, 3]
+            my_list.reverse()
+            print(my_list) # Outputs [3, 2, 1] 
+          </code>
+        </pre>
+        <h3>Common List Operations</h3>
+        <p>Here are some of the most commonly used list operations:</p>
+        <li>len(): used to get the length of a list</li>
+        <li>min(): used to get the minimum element in a list.</li>
+        <li>max(): used to get the maximum element in a list.</li>
+        <li>sum(): used to get the sum of all the elements in a list.</li>
+        <li>in: used to check if an element is present in a list.</li>
+        <li>not in: used to check if an element is not present in a list.</li>
+        <li>Here are some examples of how these operations can be used:</li>
+        <pre>
+          <code>
+            my_list = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+
+            print(len(my_list))  # Outputs 11
+            print(min(my_list))  # Outputs 1
+            print(max(my_list))  # Outputs 9
+            print(sum(my_list))  # Outputs 44
+
+            if 4 in my_list:
+                print("4 is in the list")
+            else:
+                print("4 is not in the list")
+
+            if 7 not in my_list:
+                print("7 is not in the list")
+            else:
+                print("7 is in the list")
+          </code>
+        </pre>
+      </div>
+      <div>
+        <h2>Dictionaries: creating, indexing, methods, common operations</h2>
+        <p>In Python, a dictionary is an unordered collection of key-value pairs. The key is used to access the value associated with it. Here's an overview of creating and using dictionaries in Python:
+        </p>
+        <h3>Creating a Dictionary</h3>
+        <p>To create a dictionary in Python, you can use curly braces {} or the dict() function. Here's an example:
+        </p>
+        <pre>
+          <code>
+            my_dict = {'apple': 1, 'banana': 2, 'orange': 3}
+          </code>
+        </pre>
+        <p>In this example, my_dict is a dictionary with three key-value pairs.
+        </p>
+        <h3>Accessing Dictionary Values</h3>
+        <p>You can access the value associated with a key by using the key inside square brackets []. Here's an example:
+        </p>
+        <pre>
+          <code>
+            my_dict = {'apple': 1, 'banana': 2, 'orange': 3}
+            print(my_dict['apple'])  # Output: 1
+          </code>
+        </pre>
+        <p>If the key is not present in the dictionary, it will raise a KeyError.
+        </p>
+        <h3>Adding and Modifying Dictionary Values</h3>
+        <p>To add a new key-value pair to a dictionary or modify an existing value, you can use the square brackets []. Here's an example:
+        </p>
+        <pre>
+          <code>
+            my_dict['pear'] = 4  # Adding a new key-value pair
+            my_dict['banana'] = 5  # Modifying an existing value 
+          </code>
+        </pre>
+        <h3>Dictionary Methods</h3>
+        <p>Here are some common methods that can be used with dictionaries in Python:
+        </p>
+        <li>keys(): Returns a list of all the keys in the dictionary.</li>
+        <li>values(): Returns a list of all the values in the dictionary.</li>
+        <li>items(): Returns a list of tuples containing the key-value pairs.</li>
+        <p>Here's an example of how these methods can be used:</p>
+        <pre>
+          <code>
+            print(my_dict.keys())  # Output: dict_keys(['apple', 'banana', 'orange', 'pear'])
+            print(my_dict.values())  # Output: dict_values([1, 5, 3, 4])
+            print(my_dict.items())  # Output: dict_items([('apple', 1), ('banana', 5), ('orange', 3), ('pear', 4)])
+          </code>
+        </pre>
+        <h3>Dictionary Common Operations</h3>
+        <p>Here are some common dictionary operations in Python:</p>
+        <li>len(): Returns the number of key-value pairs in the dictionary.</li>
+        <li>in: Returns True if the key is in the dictionary, False otherwise.</li>
+        <li>del: Removes a key-value pair from the dictionary.</li>
+        <p>Here's an example of how these operations can be used:</p>
+        <pre>
+          <code>
+            print(len(my_dict))  # Output: 4
+            print('apple' in my_dict)  # Output: True
+            del my_dict['pear']
+            print(my_dict)  # Output: {'apple': 1, 'banana': 5, 'orange': 3}
+          </code>
+        </pre>
+        <p>In this example, len() returns the number of key-value pairs in the dictionary, in checks if a key is present in the dictionary, and del removes a key-value pair from the dictionary.</p>
+      </div>
+      <div>
+        <h2>Tuples: creating, indexing, methods, common operations</h2>
+        <p>In Python, a tuple is an ordered collection of elements. Tuples are similar to lists, but they are immutable, which means that their contents cannot be changed. Here's an overview of creating and using tuples in Python:
+        </p>
+        <h3>Creating a Tuple</h3>
+        <p>To create a tuple in Python, you can use parentheses () or the tuple() function. Here's an example:
+        </p>
+        <pre>
+          <code>
+            my_tuple = (1, 2, 3, 4, 5)
+          </code>
+        </pre>
+        <p>In this example, my_tuple is a tuple with five elements.</p>
+        <h3>Accessing Tuple Elements
+        </h3>
+        <p>You can access an element in a tuple by using the index of the element inside square brackets []. Here's an example:
+        </p>
+        <pre>
+          <code>
+            print(my_tuple[0])  # Output: 1 
+          </code>
+        </pre>
+        <h3>Tuple Methods</h3>
+        <p>Since tuples are immutable, there are only two methods available for tuples in Python:
+        </p>
+        <li>count(): Returns the number of times a value appears in the tuple.</li>
+        <li>index(): Returns the index of the first occurrence of a value in the tuple.</li>
+        <p>Here's an example of how these methods can be used:</p>
+        <pre>
+          <code>
+            my_tuple = (1, 2, 3, 4, 5, 3)
+
+            print(my_tuple.count(3))  # Output: 2
+            print(my_tuple.index(4))  # Output: 3
+          </code>
+        </pre>
+
+        <h3>Tuple Common Operations</h3>
+        <p>Here are some common tuple operations in Python:</p>
+        <li>len(): Returns the number of elements in the tuple.</li>
+        <li>in: Returns True if an element is in the tuple, False otherwise.</li>
+        <p>Here's an example of how these operations can be used:</p>
+        <pre>
+          <code>
+            my_tuple = (1, 2, 3, 4, 5)
+
+            print(len(my_tuple))  # Output: 5
+            print(3 in my_tuple)  # Output: True 
+          </code>
+        </pre>
+        <p>In this example, len() returns the number of elements in the tuple, and in checks if an element is present in the tuple.
+        </p>
+      </div>
+      <div>
+        <h2>Input and Output</h2>
+        <p>In Python, there are several ways to handle input and output. The most common ways to handle output are printing to the console and writing to a file. The most common way to handle input is reading from the console or reading from a file.
+        </p>
+        <h3>Printing to the console:</h3>
+        <p>To print output to the console in Python, you can use the print() function. The print() function can take zero or more arguments, separated by commas. The arguments can be of any data type, including strings, numbers, and variables.
+        </p>
+        <p>Here's an example of how to use the print() function in Python:
+        </p>
+        <pre>
+          <code>
+            name = "Alice"
+            age = 30
+            print("My name is", name, "and I am", age, "years old.")
+          </code>
+        </pre>
+        <p>In this example, the print() function is used to print a string with some variables. The variables name and age are inserted into the string using commas.
+        </p>
+        <h3>Reading from the console:</h3>
+        <p>To read input from the console in Python, you can use the input() function. The input() function takes a string as an argument, which is used as a prompt for the user. The function returns the input as a string.
+        </p>
+        <p>Here's an example of how to use the input() function in Python:
+        </p>
+        <pre>
+          <code>
+            name = input("What is your name? ")
+            print("Hello, ", name, "!") 
+          </code>
+        </pre>
+        <p>In this example, the input() function is used to read the user's name from the console. The user is prompted with the question "What is your name?" The input is then stored in the variable name, and the program uses the print() function to greet the user.</p>
+        <p>In Python, there are several ways to handle input and output. The most common ways to handle output are printing to the console and writing to a file. The most common way to handle input is reading from the console or reading from a file.
+        </p>
+        <h3>Printing to the console:</h3>
+        <p>To print output to the console in Python, you can use the print() function. The print() function can take zero or more arguments, separated by commas. The arguments can be of any data type, including strings, numbers, and variables.
+        </p>
+        <p>Here's an example of how to use the print() function in Python:
+        </p>
+        <pre>
+          <code>
+            name = "Alice"
+            age = 30
+            print("My name is", name, "and I am", age, "years old.")
+          </code>
+        </pre>
+        <p>In this example, the print() function is used to print a string with some variables. The variables name and age are inserted into the string using commas.
+        </p>
+      </div>
+      <h2>1.Conditional Statements</h2>
+      <p>Conditional statements allow you to execute different code blocks based on a condition. In Python, the if, elif, and else keywords are used to create conditional statements. Here's an example:
+      </p>
+      <pre>
+        <code>
+          x = 5
+
+          if x < 0:
+              print("x is negative")
+          elif x == 0:
+              print("x is zero")
+          else:
+              print("x is positive")
+        </code>
+      </pre>
+      <h3>If condition</h3>
+      <p>An if statement is used to execute a block of code if a certain condition is true. Here's the basic syntax of an if statement:
+      </p>
+      <pre>
+        <code>
+          if condition:
+               # code block to be executed if condition is true
+        </code>
+      </pre>
+      <p>In this syntax, condition is a boolean expression that is evaluated to either True or False. If condition is True, the code block that follows the if statement is executed.
+      </p>
+      <h3>If-Else Statements</h3>
+      <p>An if-else statement is used to execute one block of code if a condition is true, and another block of code if the condition is false. Here's the basic syntax of an if-else statement:
+      </p>
+      <pre>
+        <code>
+          if condition:
+              # code block to be executed if condition is true
+          else:
+              # code block to be executed if condition is false
+        </code>
+      </pre>
+      <p>In this syntax, condition is a boolean expression that is evaluated to either True or False. If condition is True, the code block that follows the if statement is executed. If condition is False, the code block that follows the else statement is executed.
+      </p>
+      <h3>If-Elif-Else Statements</h3>
+      <p>An if-elif-else statement is used to execute different blocks of code depending on multiple conditions. Here's the basic syntax of an if-elif-else statement:
+      </p>
+      <pre>
+        <code>
+          if condition1:
+              # code block to be executed if condition1 is true
+          elif condition2:
+              # code block to be executed if condition2 is true
+          else:
+              # code block to be executed if all conditions are false 
+        </code>
+      </pre>
+      <p>In this syntax, condition1 and condition2 are boolean expressions that are evaluated to either True or False. If condition1 is True, the code block that follows the first if statement is executed. If condition1 is False and condition2 is True, the code block that follows the elif statement is executed. If both condition1 and condition2 are False, the code block that follows the else statement is executed.
+      </p>
+      <h2>2.Loops</h2>
+      <p>Loops allow you to execute the same code block multiple times. In Python, there are two main types of loops: for loops and while loops.
+      </p>
+      <h3>for loops</h3>
+      <p>for loops allow you to iterate over a collection of items. Here's an example:
+        python</p>
+      <pre>
+        <code>
+          fruits = ["apple", "banana", "cherry"]
+
+          for fruit in fruits:
+              print(fruit)
+        </code>
+      </pre>
+      <p>In this example, the for loop iterates over the fruits list and prints each item in the list.
+      </p>
+      <h3>while loops</h3>
+      <p>while loops allow you to execute a code block as long as a condition is true. Here's an example:
+        python</p>
+      <pre>
+        <code>
+          i = 0
+
+          while i < 5:
+              print(i)
+              i += 1
+        </code>
+      </pre>
+      <p>In this example, the while loop executes the code block as long as i is less than 5. The code block prints the current value of i and then increments i by 1.
+      </p>
+      <h3> Control Statements</h3>
+      <p>Control statements allow you to change the flow of a loop or conditional statement. There are two main control statements in Python: break and continue.
+      </p>
+      <h3>break</h3>
+      <p>break is used to exit a loop early. Here's an example:
+      </p>
+      <pre>
+        <code>
+          fruits = ["apple", "banana", "cherry"]
+
+          for fruit in fruits:
+              if fruit == "banana":
+                  break
+              print(fruit)
+        </code>
+      </pre>
+      <p>In this example, the for loop iterates over the fruits list and prints each item in the list. However, the if statement inside the loop checks if the current item is "banana", and if it is, the break statement is executed, which exits the loop early.
+      </p>
+      <h3>continue</h3>
+      <p> continue is used to skip the current iteration of a loop and move on to the next one. Here's an example:
+      </p>
+      <pre>
+        <code>
+          fruits = ["apple", "banana", "cherry"]
+
+          for fruit in fruits:
+              if fruit == "banana":
+                  continue
+              print(fruit)
+        </code>
+      </pre>
+      <p>In this example, the for loop iterates over the fruits list and prints each item in the list. However, the if statement inside the loop checks if the current item is "banana", and if it is, the continue statement is executed, which skips the current iteration of the loop and moves on to the next one.
+      </p>
+      <div>
+        <h2>Functions: creating, calling, parameters, return statements</h2>
+        <p>Functions are an essential part of any programming language, including Python. A function is a block of code that performs a specific task and can be called from other parts of the program. In Python, functions are defined using the def keyword followed by the function name and a set of parentheses. The body of the function is indented and contains the code that is executed when the function is called.
+        </p>
+        <h3>Creating a Function</h3>
+        <p>Here's an example of a simple function that prints a message to the console:
+        </p>
+        <pre>
+          <code>
+            def print_message():
+                print("Hello, World!")
+          </code>
+        </pre>
+        <p>In this example, the function name is print_message. When the function is called, it will print the message "Hello, World!" to the console.
+        </p>
+        <h3>Calling a Function</h3>
+        <p>To call a function in Python, you simply need to write the name of the function followed by a set of parentheses. If the function takes parameters, you can pass them inside the parentheses. Here's an example:
+        </p>
+        <pre>
+          <code>
+            def print_name(name):
+                print("Hello, " + name + "!")
+
+            print_name("John")
+          </code>
+        </pre>
+        <p>In this example, the function print_name takes one parameter name and prints a message to the console using that parameter. When the function is called with the argument "John", it will print the message "Hello, John!" to the console.
+        </p>
+        <h3>Parameters</h3>
+        <p>Functions in Python can take parameters, which are values that are passed to the function when it is called. Parameters are defined inside the parentheses when the function is defined, and they can be used in the function body. Here's an example:
+        </p>
+        <pre>
+          <code>
+            def add_numbers(x, y):
+                result = x + y
+            print(result)
+
+            add_numbers(2, 3)
+          </code>
+        </pre>
+        <p>In this example, the function add_numbers takes two parameters x and y. Inside the function, these parameters are added together and the result is printed to the console. When the function is called with the arguments 2 and 3, it will print the result 5 to the console.
+        </p>
+        <h3>Return Statements</h3>
+        <p>Functions in Python can also return values using the return keyword. When a function returns a value, you can assign the result to a variable or use it in other parts of the program. Here's an example:
+        </p>
+        <pre>
+          <code>
+            def multiply_numbers(x, y):
+                result = x * y
+                return result
+        
+            product = multiply_numbers(2, 3)
+            print(product) 
+          </code>
+        </pre>
+        <p>In this example, the function multiply_numbers takes two parameters x and y. Inside the function, these parameters are multiplied together and the result is returned using the return keyword. When the function is called with the arguments 2 and 3, it will return the result 6. This result is then assigned to the variable product and printed to the console.
+        </p>
+        <p>Functions are an important concept in programming, and they can be used to make your code more modular, reusable, and easier to understand. In Python, functions are easy to create and use, and they are a powerful tool for any developer.</p>
+      </div>
+      <div>
+        <h2>Lambda Function</h2>
+        <p>A lambda function in Python is a small, anonymous function that can have any number of arguments, but can only have one expression. Lambda functions are also known as "anonymous functions" because they don't have a name.
+        </p>
+        <p>Lambda functions are defined using the lambda keyword, followed by a list of arguments and a single expression. The syntax for a lambda function is as follows:
+        </p>
+        <pre>
+          <code>
+            lambda arguments: expression 
+          </code>
+        </pre>
+        <p>Here's an example of a simple lambda function that adds two numbers:
+        </p>
+        <pre>
+          <code>
+            add_numbers = lambda x, y: x + y
+            result = add_numbers(2, 3)
+            print(result) 
+          </code>
+        </pre>
+        <p>In this example, the lambda function takes two arguments x and y, and adds them together using the expression x + y. The result of the lambda function is assigned to the variable add_numbers, and then the lambda function is called with the arguments 2 and 3. The result of the lambda function call (5) is then printed to the console.
+        </p>
+        <p>Lambda functions can be used in a variety of ways in Python. One common use case is to pass a lambda function as an argument to another function. For example, the built-in map() function in Python can be used to apply a function to every element in a list. Here's an example:
+        </p>
+        <pre>
+          <code>
+            numbers = [1, 2, 3, 4, 5]
+            squares = list(map(lambda x: x ** 2, numbers))
+            print(squares)
+          </code>
+        </pre>
+        <p>In this example, the lambda function lambda x: x ** 2 is passed as the first argument to the map() function. The lambda function takes one argument x and returns the square of that argument using the expression x ** 2. The map() function applies this lambda function to every element in the numbers list, and returns a new list of the squares of each number. The result of the map() function call is then converted to a list using the list() function, and printed to the console.
+        </p>
+        <p>Lambda functions are a powerful tool in Python, and they can be used to write concise and readable code. However, it's important to use them judiciously, and to keep in mind that they can sometimes make your code harder to understand if they're overused or used inappropriately.
+        </p>
+      </div>
+      <div>
+        <h2>File Handling</h2>
+        <p>File handling is an important part of many programming languages, including Python. Python provides built-in functions to read and write files, as well as libraries to handle more complex file formats. In this explanation, we'll cover the basics of file handling in Python.
+        </p>
+        <h3>Opening a file:</h3>
+        <p>Before you can read or write a file in Python, you need to open it. The built-in open() function is used to open a file. The open() function takes two arguments: the filename, and the mode in which the file is to be opened. The mode can be "r" for reading, "w" for writing, "a" for appending, or "x" for exclusive creation.
+        </p>
+        <p>Here's an example of how to use the open() function to open a file for reading:
+        </p>
+        <pre>
+          <code>
+            file = open("example.txt", "r")
+          </code>
+        </pre>
+        <p>In this example, the open() function is used to open the file "example.txt" in read mode. The file variable is now a file object that can be used to read the contents of the file.
+        </p>
+        <h3>Reading from a file:</h3>
+        <p>To read the contents of a file in Python, you can use the file object's read() method. The read() method reads the entire contents of the file as a string.
+        </p>
+        <p>Here's an example of how to read the contents of a file:
+        </p>
+        <pre>
+          <code>
+            file = open("example.txt", "r")
+            contents = file.read()
+            print(contents)
+          </code>
+        </pre>
+        <p>In this example, the read() method is used to read the entire contents of the file. The contents of the file are then printed to the console using the print() function.
+        </p>
+        <p>You can also use the readline() method to read one line at a time from a file. The readline() method reads one line at a time, and returns an empty string when it reaches the end of the file.
+        </p>
+        <p>Here's an example of how to read one line at a time from a file:
+        </p>
+        <pre>
+          <code>
+            file = open("example.txt", "r")
+            line = file.readline()
+            while line:
+                print(line)
+                line = file.readline()
+          </code>
+        </pre>
+        <p>In this example, the readline() method is used to read one line at a time from the file. The while loop is used to read and print each line in the file until the end of the file is reached.
+        </p>
+        <h3>Writing to a file:</h3>
+        <p>To write to a file in Python, you can use the file object's write() method. The write() method writes a string to the file.
+        </p>
+        <p>Here's an example of how to write to a file:
+        </p>
+        <pre>
+          <code>
+            file = open("example.txt", "w")
+            file.write("Hello, world!")
+            file.close()
+          </code>
+        </pre>
+        <p>In this example, the write() method is used to write the string "Hello, world!" to the file. The close() method is then used to close the file.
+        </p>
+        <h3>Appending to a file:</h3>
+        <p>To append to a file in Python, you can use the file object's write() method with mode a. The write() method writes a string to the file, and appends it to the end of the file.
+        </p>
+        <p>Here's an example of how to append to a file:
+        </p>
+        <pre>
+          <code>
+            file = open("example.txt", "a")
+            file.write("Hello, again!")
+            file.close()
+          </code>
+        </pre>
+        <p>In this example, the write() method is used with mode a to append the string "Hello, again!" to the end of the file.
+        </p>
+        <h3>Closing a file:</h3>
+        <p>When you're done working with a file in Python, it's important to close it using the file object's close() method. Closing the file releases any system resources that were being used by the file.
+        </p>
+       </div>
+       <div>
+        <h2>Modules in Python</h2>
+        <p>In Python, a module is a file that contains Python definitions and statements. These definitions and statements can be functions, classes, variables, or other Python constructs. A module is imported into another Python program using the import statement. For example, suppose you have a file named my_module.py that contains a function named my_function. To use this function in another Python program, you would import the module like this:
+        </p>
+        <pre>
+          <code>
+            import my_module
+
+            result = my_module.my_function(42)
+            print(result)
+          </code>
+        </pre>
+        <p>In this example, the import statement loads the my_module module into the current Python program. The my_function function can then be called using the my_module.my_function syntax.
+        </p>
+        <h3>Basic modules and libraries: math, random, time</h3>
+        <p>Modules provide a way to organize Python code into reusable units. They allow you to encapsulate functionality in a separate file that can be imported and used in other Python programs.
+          Python comes with a number of built-in modules and libraries that provide additional functionality for your programs. Here are some details on three basic modules and libraries: math, random, and time.</p>
+        <h3>math</h3>
+        <p>The math module provides various mathematical functions and constants. Here are some examples of how to use the math module in Python:
+        </p>
+        <pre>
+          <code>
+            import math
+
+            # Square root of a number
+            x = math.sqrt(25)
+            print(x)
+            
+            # Trigonometric functions
+            y = math.sin(0.5)
+            z = math.cos(0.5)
+            print(y, z)
+            
+            # Constants
+            pi = math.pi
+            e = math.e
+            print(pi, e)
+             
+          </code>
+        </pre>
+        <p>In this example, we import the math module and use its sqrt() function to compute the square root of 25. We also use the sin() and cos() functions to compute the sine and cosine of 0.5 radians. Finally, we use the pi and e constants provided by the math module.
+        </p>
+        <h3>Random</h3>
+        <p>The random module provides functions for generating random numbers and sequences. Here are some examples of how to use the random module in Python:
+        </p>
+        <pre>
+          <code>
+            import random
+
+            # Random integer between 1 and 10
+            x = random.randint(1, 10)
+            print(x)
+            
+            # Random choice from a list
+            my_list = [1, 2, 3, 4, 5]
+            y = random.choice(my_list)
+            print(y)
+            
+            # Shuffle a list
+            random.shuffle(my_list)
+            print(my_list)
+             
+          </code>
+        </pre>
+        <p>In this example, we import the random module and use its randint() function to generate a random integer between 1 and 10. We also use the choice() function to randomly select an element from a list, and the shuffle() function to randomly shuffle the elements of a list.
+        </p>
+        <h3>time</h3>
+        <p>The time module provides functions for working with dates and times. Here are some examples of how to use the time module in Python:
+        </p>
+        <pre>
+          <code>
+            import time
+
+            # Current time in seconds since the epoch
+            x = time.time()
+            print(x)
+
+            # Current local time as a string
+            y = time.ctime()
+            print(y)
+
+            # Pause the program for 5 seconds
+            time.sleep(5)
+            print("Done sleeping")
+          </code>
+        </pre>
+        <p>In this example, we import the time module and use its time() function to get the current time in seconds since the epoch (January 1, 1970). We also use the ctime() function to get the current local time as a string. Finally, we use the sleep() function to pause the program for 5 seconds.
+        </p>
+        <p>These are just a few examples of the many built-in modules and libraries available in Python. By importing and using these modules, you can extend the functionality of your Python programs in a variety of ways.
+        </p>
+      </div>
+      <div>
+        <h2>Library in Python</h2>
+        <p>In Python, a library is a collection of modules that provide additional functionality beyond what is available in the Python standard library. Libraries can be thought of as collections of pre-written code that you can use in your Python programs to perform specific tasks. There are many libraries available for Python that are maintained by third-party developers and open source communities.
+        </p>
+        <p>To use a library in Python, you must first install it. This is typically done using a package manager such as pip, which can be run from the command line. For example, to install the NumPy library, you would run the following command:
+        </p>
+        <pre>
+          <code>
+            pip install numpy 
+          </code>
+        </pre>
+        <p>Once you've installed a library, you can import its modules into your Python programs using the import statement. For example, to use the NumPy library in a program, you would write:
+        </p>
+        <pre>
+          <code>
+            import numpy
+          </code>
+        </pre>
+        <p>This would load the NumPy library into your program, allowing you to use its functions and classes.
+        </p>
+        <p>Libraries provide a wide range of functionality, from numerical computing and data analysis to web development and machine learning. Some popular libraries in the Python ecosystem include:
+        </p>
+        <li>NumPy: a library for numerical computing with arrays and matrices</li>
+        <li>Pandas: a library for data analysis and manipulation</li>
+        <li>Matplotlib: a library for data visualization</li>
+        <li>Django: a web framework for building web applications</li>
+        <li>TensorFlow: a library for machine learning and deep learning</li>
+        <p>Libraries can help you write Python programs more efficiently and with less code. They can also provide access to powerful algorithms and techniques that would be difficult to implement from scratch.
+        </p>
+        <p>In addition to third-party libraries, Python also comes with a large standard library that provides a wide range of built-in functionality. This includes modules for working with files, networking, and many other tasks. To use a module from the standard library, you simply need to import it like any other module.
+        </p>
+      </div>
+      <div>
+        <h2>NumPy Library</h2>
+        <p>NumPy is a Python library for numerical computing with arrays and matrices. It provides tools for working with large, multi-dimensional arrays and matrices, along with a variety of mathematical operations that can be performed on them. NumPy is a fundamental library for scientific computing with Python, and is widely used in data analysis, machine learning, and other fields.
+        </p>
+        <p>Here are some of the key features and functions of the NumPy library:
+        </p>
+        <li>Multi-dimensional arrays: NumPy provides a powerful and flexible multi-dimensional array object called ndarray. This object can be used to represent vectors, matrices, and other types of arrays, and provides efficient operations for manipulating them.</li>
+        <li>Broadcasting: NumPy supports broadcasting, which allows you to perform operations on arrays of different shapes and sizes. This makes it easy to write code that can work with arrays of varying dimensions.</li>
+        <li>Mathematical functions: NumPy provides a wide range of mathematical functions that can be performed on arrays, including trigonometric, logarithmic, and exponential functions.</li>
+        <li>Linear algebra operations: NumPy provides a set of functions for performing linear algebra operations on arrays, including matrix multiplication, inversion, and eigenvalue computation.</li>
+        <li>Fourier transforms: NumPy includes functions for computing fast Fourier transforms (FFTs), which are useful in signal processing and other applications.</li>
+        <p>To use the NumPy library in a Python program, you first need to import it using the following statement:
+        </p>
+        <pre>
+          <code>
+            import numpy as np
+          </code>
+        </pre>
+        <p>This will load the NumPy library into your program and allow you to use its functions and classes. Here are a few examples of how to use NumPy in Python:
+        </p>
+        <pre>
+          <code>
+            import numpy as np
+
+            # Create a one-dimensional array
+            a = np.array([1, 2, 3, 4, 5])
+            
+            # Create a two-dimensional array
+            b = np.array([[1, 2], [3, 4]])
+            
+            # Perform element-wise addition on two arrays
+            c = a + b
+            
+            # Compute the dot product of two arrays
+            d = np.dot(a, b)
+            
+            # Compute the sine of an array
+            e = np.sin(a)
+            
+            # Compute the eigenvalues of a matrix
+            f = np.linalg.eigvals(b) 
+          </code>
+        </pre>
+        <p>In the above example, we create a one-dimensional array a, a two-dimensional array b, and perform element-wise addition and dot product on them. We also compute the sine of the a array, and the eigenvalues of the b matrix using NumPy functions. Note that NumPy functions are usually faster than using pure Python for similar computations.</p>
+        <h3>Broadcasting rules</h3>
+        <p>Broadcasting is a mechanism in NumPy that allows arrays with different shapes to be used in arithmetic operations. The broadcasting rules in NumPy define how arrays with different shapes are treated during arithmetic operations. Here are the key rules:
+        </p>
+        <li>If the arrays have different ranks (number of dimensions), the lower-ranked array is padded with ones on its leading (left) side.</li>
+        <li>If the arrays have the same number of dimensions, but different shapes, the array with shape equal to 1 in any dimension is stretched to match the corresponding shape of the other array.</li>
+        <li>If the arrays have different shapes, and none of the shapes are equal to 1, a ValueError is raised, indicating that the arrays are not compatible.</li>
+        <p>Broadcasting allows for efficient computation by eliminating the need to create intermediate arrays. It also simplifies the syntax of operations involving arrays of different shapes. For example, you can add a scalar value to an array or add two arrays of different shapes using the same syntax as you would use for two arrays of the same shape.
+        </p>
+        <p>Overall, broadcasting is a powerful feature of NumPy that makes it easier to work with arrays of different shapes and sizes, and allows for efficient and concise computation.
+        </p>
+      </div>
+      <div>
+        <h2>Matplotlib Library</h2>
+        <p>Matplotlib is a popular Python library used for creating visualizations, such as line plots, scatter plots, bar plots, histograms, and more. It provides a wide range of customization options and supports a variety of output formats, including interactive displays and static images.
+        </p>
+        <p>Here is a brief overview of how to use Matplotlib in Python:
+        </p>
+        <h3>Importing the library:</h3>
+        <p>Before using Matplotlib, you need to import the library using the following command:</p>
+        <pre>
+          <code>
+            import matplotlib.pyplot as plt
+          </code>
+        </pre>
+        <h3>Creating a plot:</h3>
+        <p>To create a plot, you first need to create some data to visualize. Then, you can use the plot() function to create a line plot, for example:</p>
+        <pre>
+          <code>
+            x = [1, 2, 3, 4]
+            y = [2, 4, 6, 8]
+            plt.plot(x, y)
+          </code>
+        </pre>
+        <h3>Customizing the plot:</h3>
+        <p> Once you have created a plot, you can customize it by adding a title, labels for the axes, legends, and more. For example:</p>
+        <pre>
+          <code>
+            x = [1, 2, 3, 4]
+            y = [2, 4, 6, 8]
+            plt.plot(x, y)
+          </code>
+        </pre>
+        <h3>Customizing the plot:</h3>
+        <p>Once you have created a plot, you can customize it by adding a title, labels for the axes, legends, and more. For example:</p>
+        <pre>
+          <code>
+            plt.title("My Plot")
+            plt.xlabel("X-axis label")
+            plt.ylabel("Y-axis label")
+            plt.legend(["Line 1"])
+          </code>
+        </pre>
+        <p>Displaying the plot: After creating and customizing the plot, you can display it using the show() function:
+        </p>
+        <pre>
+          <code>
+            plt.show()
+          </code>
+        </pre>
+        <p>Matplotlib provides many other functions and features that allow you to create and customize a wide range of visualizations. Some of the key features of Matplotlib include:
+        </p>
+        <li>Multiple subplots: You can create multiple plots in a single figure using the subplot() function.</li>
+        <li>Custom styles: Matplotlib provides several built-in styles, or you can create your own custom styles to apply to your plots.</li>
+        <li>Saving plots: You can save your plots to various file formats, including PNG, PDF, SVG, and more.</li>
+        <p>Overall, Matplotlib is a powerful and flexible library for creating visualizations in Python, and it is widely used in data analysis, scientific research, and other fields.
+        </p>
+
+      </div>
+      
+  </body>
+</html>
